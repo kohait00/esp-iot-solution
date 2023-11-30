@@ -11,6 +11,7 @@ if (NOT TARGET gen_compressed_ota)
 
     add_custom_command(TARGET gen_compressed_ota
     POST_BUILD
+    COMMAND cd ${build_dir}
     COMMAND ${PYTHON} ${GEN_COMPRESSED_BIN_CMD}
     COMMENT "The gen compresssed bin cmd is: ${GEN_COMPRESSED_BIN_CMD}"
     )
